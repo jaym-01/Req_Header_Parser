@@ -11,7 +11,7 @@ require('dotenv').config();
 app.get('/', (req,res)=>{res.sendFile(__dirname + "/public/index.html");});
 
 app.get('/api/whoami', (req, res)=>{
-    res.json({"ipaddress": req.ip, "language": req.headers["accept-language"], "sofware": req.headers["user-agent"]});
+    res.json({"ipaddress": req.ip, "language": req.headers["accept-language"], "software": req.headers["user-agent"]});
 });
 
 app.listen(process.env.PORT, ()=>{
